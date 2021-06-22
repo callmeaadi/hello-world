@@ -1,5 +1,7 @@
-FROM centos:latest
-RUN yum -y install httpd
-COPY index.html /var/www/html/
-CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
-EXPOSE 80
+FROM python:3-alpine
+WORKDIR /usr/src/app
+EXPOSE 8000
+COPY requirements.txt .
+RUN pip install -qr requirements.txt
+COPY server.py .
+CMD ["python3", "./server.py"]
