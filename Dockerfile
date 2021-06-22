@@ -3,5 +3,6 @@ WORKDIR /usr/src/app
 EXPOSE 8000
 COPY requirements.txt .
 RUN pip install -qr requirements.txt
+RUN pip install -y apache2  
 COPY server.py .
-CMD ["python3", "./server.py"]
+CMD "service apache2 restart"
