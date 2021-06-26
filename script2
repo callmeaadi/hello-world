@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo docker run -it -d -p 80:80 --name aayush web 
+docker run -it -d -p 80:80 --name aayush web 
