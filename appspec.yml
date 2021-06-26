@@ -1,6 +1,8 @@
 version: 0.0
 os: linux
-
+files:
+  - source: /Dockerfile
+    destination: /home/ubuntu/
 hooks:
   BeforeInstall:
     - location: /script1
