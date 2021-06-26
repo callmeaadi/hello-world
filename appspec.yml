@@ -3,11 +3,4 @@ os: linux
 files:
   - source: /Dockerfile
     destination: /home/ubuntu/
-hooks:
-  BeforeInstall:
-    - location: /script1
-      timeout: 300
-      runas: root
-    - location: /script2
-      timeout: 300
-      runas: root
+
