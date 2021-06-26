@@ -3,9 +3,9 @@ os: linux
 
 hooks:
   BeforeInstall:
-    - location: /install_dependencies
+    - location: /script1
       timeout: 300
       runas: root
-    - location: /start_server
+    - location: /script2
       timeout: 300
       runas: root
